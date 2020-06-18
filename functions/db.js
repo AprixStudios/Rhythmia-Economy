@@ -14,7 +14,7 @@ const Schema = new mongoose.Schema({
     skills: {cop: Number, law: Number, decisions: Number, communication: Number, firefighter: Number, physics: Number, medical: Number, therapy: Number, coding: Number, creativity: Number, editing: Number, commentary: Number, humour: Number, driving: Number, music: Number, painting: Number}
 });
 
-const userID = mongoose.table("userID", Schema);
-const DB = mongoose.table("id", Schema);
+const userID = mongoose.model("userID", Schema);
+const DB = mongoose.model("id", Schema);
 
 module.exports = { userID, DB }
