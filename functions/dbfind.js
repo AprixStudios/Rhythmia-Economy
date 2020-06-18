@@ -1,7 +1,7 @@
 const { userID, DB } = require(`./db.js`);
 
 async function getDB(userid) {
-db.findOne({
+DB.findOne({
     userID: userid
 }, ( err, res ) => {
     return { err, res };
