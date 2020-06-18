@@ -17,13 +17,6 @@ mongoose.connect(`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@altr
 .then(console.log('Database Connected...'))
 .catch(err => console.log(err));
 
-const Schema = new mongoose.Schema({
-    userID: String,
-    balance: Number,
-    lastClaimed: {daily: String, weekly: String, monthly: String, work: String}
-});
-
-
 client.functions = new Discord.Collection();
 
 const functionFiles = fs.readdirSync('./functions').filter(file => file.endsWith('.js'));

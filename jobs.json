@@ -1,0 +1,236 @@
+{
+    "jobs": {
+        "cop": {
+            "name": "Cop",
+            "minRep": 50,
+            "maxRec": 1,
+            "earnings": 120,
+            "skillReq": [
+                {
+                    "type": "cop",
+                    "level": 7
+                },
+                {
+                    "type": "law",
+                    "level": 3
+                },
+                {
+                    "type": "decisions",
+                    "level": 5
+                },
+                {
+                    "type": "communication",
+                    "level": 4
+                }
+            ]
+        },
+        "firefighter": {
+            "name": "Firefighter",
+            "minRep": 35,
+            "maxRec": 3,
+            "earnings": 90,
+            "skillReq": [
+                {
+                    "type": "firefighter",
+                    "level": 7
+                },
+                {
+                    "type": "physics",
+                    "level": 3
+                },
+                {
+                    "type": "decisions",
+                    "level": 5
+                }
+            ]
+        },
+        "doctor": {
+            "name": "Doctor",
+            "minRep": 75,
+            "maxRec": 0,
+            "earnings": 180,
+            "skillReq": [
+                {
+                    "type": "medical",
+                    "level": 10
+                },
+                {
+                    "type": "physics",
+                    "level": 6
+                },
+                {
+                    "type": "decisions",
+                    "level": 5
+                }
+            ]
+        },
+        "therapist": {
+            "name": "Therapist",
+            "minRep": 25,
+            "maxRec": 5,
+            "earnings": 75,
+            "skillReq": [
+                {
+                    "type": "therapy",
+                    "level": 10
+                },
+                {
+                    "type": "medical",
+                    "level": 4
+                },
+                {
+                    "type": "communication",
+                    "level": 8
+                }
+            ]
+        },
+        "cashier": {
+            "name": "Cashier",
+            "minRep": -9999999,
+            "maxRec": 9999999,
+            "earnings": 10,
+            "skillReq": [
+                {
+                    "type": "communication",
+                    "level": 1
+                }
+            ]
+        },
+        "developer": {
+            "name": "Developer",
+            "minRep": 5,
+            "maxRec": 9999999,
+            "earnings": 100,
+            "skillReq": [
+                {
+                    "type": "coding",
+                    "level": 10
+                },
+                {
+                    "type": "creativity",
+                    "level": 7
+                },
+                {
+                    "type": "communication",
+                    "level": 3
+                }
+            ]
+        },
+        "creator": {
+            "name": "Content Creator",
+            "minRep": -9999999,
+            "maxRec": 9999999,
+            "earnings": 0,
+            "skillReq": [
+                {
+                    "type": "creativity",
+                    "level": 10
+                },
+                {
+                    "type": "editing",
+                    "level": 7
+                },
+                {
+                    "type": "commentary",
+                    "level": 4
+                },
+                {
+                    "type": "humour",
+                    "level": 6
+                },
+                {
+                    "type": "communication",
+                    "level": 3
+                }
+            ]
+        },
+        "driver": {
+            "name": "Taxi Driver",
+            "minRep": -10,
+            "maxRec": 10,
+            "earnings": 25,
+            "skillReq": [
+                {
+                    "type": "driving",
+                    "level": 10
+                },
+                {
+                    "type": "communication",
+                    "level": 3
+                }
+            ]
+        },
+        "musician": {
+            "name": "Musician",
+            "minRep": -9999999,
+            "maxRec": 9999999,
+            "earnings": 95,
+            "skillReq": [
+                {
+                    "type": "music",
+                    "level": 10
+                },
+                {
+                    "type": "creativity",
+                    "level": 7
+                }
+            ]
+        },
+        "painter": {
+            "name": "Painter",
+            "minRep": -9999999,
+            "maxRec": 9999999,
+            "earnings": 60,
+            "skillReq": [
+                {
+                    "type": "painting",
+                    "level": 10
+                },
+                {
+                    "type": "creativity",
+                    "level": 7
+                }
+            ]
+        },
+        "lawyer": {
+            "name": "Lawyer",
+            "minRep": 65,
+            "maxRec": 0,
+            "earnings": 110,
+            "skillReq": [
+                {
+                    "type": "law",
+                    "level": 8
+                },
+                {
+                    "type": "decisions",
+                    "level": 8
+                },
+                {
+                    "type": "communication",
+                    "level": 8
+                }
+            ]
+        },
+        "judge": {
+            "name": "Judge",
+            "minRep": 100,
+            "maxRec": 0,
+            "earnings": 250,
+            "skillReq": [
+                {
+                    "type": "law",
+                    "level": 10
+                },
+                {
+                    "type": "decisions",
+                    "level": 10
+                },
+                {
+                    "type": "communication",
+                    "level": 10
+                }
+            ]
+        }
+    }
+}

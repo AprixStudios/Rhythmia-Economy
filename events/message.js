@@ -1,4 +1,4 @@
-module.exports = (client, message, DBUserID, DBZooName, DBMoney) => {
+module.exports = (client, message) => {
     
     const prefix = process.env.PREFIX;
     let cmdHandler = client.functions.get(`commandhandler`);
