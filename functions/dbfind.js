@@ -3,10 +3,7 @@ const { userID, DB } = require(`./db.js`);
 async function getDB(userid) {
 DB.findOne({
     userID: userid
-}, ( err, res ) => {
-    return { err, res };
-});
-return { err, res };
+}, (err, res) => {return (err, res)});
 }
 
-module.exports = getDB;
+module.exports = { name: "dbfind", getDB };

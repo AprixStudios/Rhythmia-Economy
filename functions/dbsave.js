@@ -5,4 +5,4 @@ async function saveDB(newdb) {
 }
 
 
-module.exports = saveDB;
+module.exports = { name: "dbsave", saveDB };

@@ -16,4 +16,4 @@ const newDB = new DB({
 return newDB;
 }
 
-module.exports = createDB;
+module.exports = { name: "dbcreate", createDB };

@@ -8,21 +8,21 @@ module.exports = {
     category: "economy",
 
     code(client, message, args) {
-        const { getDB } = client.functions.dbget;
-        const { createDB } = client.functions.dbcreate;
-        const { saveDB } = client.functions.dbsave;
-        getDB(message.author.id).then(( err, res ) => {
-            if (err) return console.error(err);
+        const dbget = client.functions.get('dbfind');
+        const dbcreate = client.functions.get('dbcreate');
+        const dbsave = client.functions.get('dbsave');
+        dbget.getDB(message.author.id).then((err, res) => {
             if (res) return message.channel.send(`You have already started a life.`);
             else {
                 fs.readJson(`./dbamount.json`, ( errr, amnt ) => {
                     if (errr) return console.error(errr);
-                    amnt++;
-                    createDB(message.author.id, amnt).then(newDB => {
-                        saveDB(newDB);
+                    amnt.id++;
+                    dbcreate.createDB(message.author.id, amnt.id).then(newDB => {
+                        dbsave.saveDB(newDB).then(message.channel.send(`Success.`));
+                        fs.writeFile(`./dbamount.json`, JSON.stringify(amnt, null, 2));
                     });
                 });
             }
-        })
+        });
     }
 }

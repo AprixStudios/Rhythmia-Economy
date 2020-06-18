@@ -17,4 +17,4 @@ const Schema = new mongoose.Schema({
 const userID = mongoose.model("userID", Schema);
 const DB = mongoose.model("id", Schema);
 
-module.exports = { userID, DB }
+module.exports = { name: "db", userID, DB }
