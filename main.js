@@ -7,12 +7,8 @@ const http = require('http');
 const keepAlive = require(`./server.js`);
 
 setInterval(() => {
-    http.get('http://rhythmia-economy.glitch.me/');
-}, 60000);
-
-setInterval(() => {
-    http.get('http://aprixkeepalives.glitch.me/');
-}, 60000);
+    http.get('http://rhythmia-economy--aprixia.repl.co/');
+}, 10000);
 
 mongoose.connect(`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@altricatiadb-${process.env.DBURL}/rhythmiaeconomy?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
