@@ -39,11 +39,14 @@ module.exports = {
         } else if (command) {
             if (!client.commands.get(command)) return message.channel.send(`This command does not exist.`);
             const cmd = client.commands.get(command)
+            let aliases = "none";
+            if (cmd.aliases) aliases = cmd.aliases.join(', ');
             const helpEmbed = new Discord.MessageEmbed()
             .setColor("#72da7e")
             .setTitle(cmd.name)
             .setDescription(`${cmd.description}`)
-            .addField("Usage", `${cmd.usage}`)
+            .addField("Usage", `e-${cmd.name} ${cmd.usage}`)
+            .addField("Aliases", `${aliases}`)
             await message.channel.send(helpEmbed).catch(err => console.error(err))
         }
     }
