@@ -8,7 +8,6 @@ module.exports = {
         const { getDB } = client.functions.get('dbfind');
         const { saveDB } = client.functions.get('dbsave');
         const { Time } = client.functions.get('timeget');
-        const { powerUpMoney } = client.functions.get('powerupadder');
 
         getDB(message.author.id).then(res => {
             if (!res) return message.channel.send(`You have not started your life yet. Please do so by doing \`e-setup\``);
