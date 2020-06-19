@@ -14,7 +14,7 @@ module.exports = {
                 let theColorTheyWant = args[0];
                 if (!theColorTheyWant) return message.channel.send(`Please tell me what color you'd like.`);
                 if (!shop.roles[theColorTheyWant]) return message.channel.send(`That is not a valid color.`);
-                if (!res.unlocks.color.includes(theColorTheyWant)) return message.channel.send(`You do not have that color unlocked.`);
+                if (!res.unlocks.colors.includes(theColorTheyWant)) return message.channel.send(`You do not have that color unlocked.`);
                 let theRoleTheyWant = message.guild.roles.cache.get(shop.roles[theColorTheyWant].id);
                 switch (message.member.roles.cache.has(theRoleTheyWant.id)) {
                     case false:
