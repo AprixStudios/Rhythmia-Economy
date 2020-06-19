@@ -5,7 +5,7 @@ module.exports = {
 
     async code(client, message, prefix) {
         if (message.channel.type === 'dm') return;
-        if (!message.content.startsWith(prefix) || message.author.bot) return;
+        if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return;
         const args = message.content.slice(prefix.length).split(/ +/);
         const commandName = args.shift().toLowerCase();
         const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
