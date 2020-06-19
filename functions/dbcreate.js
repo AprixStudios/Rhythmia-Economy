@@ -5,7 +5,7 @@ const newDB = new DB({
     userID: userid,
     id: dbid,
     earnRate: 1,
-    balance: {Purse: 0, Bank: 0},
+    balance: {purse: 0, bank: 0},
     lastClaimed: {daily: "0", weekly: "0", monthly: "0", work: "0"},
     unlocks: {colors: [], powerUps: []},
     boosters: [{time: 0, boost: 0}],

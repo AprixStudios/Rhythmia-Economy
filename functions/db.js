@@ -5,7 +5,7 @@ const Schema = new mongoose.Schema({
     userID: String,
     id: Number,
     earnRate: Number,
-    balance: {Purse: Number, Bank: Number},
+    balance: {purse: Number, bank: Number},
     lastClaimed: {daily: String, weekly: String, monthly: String, work: String},
     unlocks: {colors: [], powerUps: []},
     boosters: [{time: Number, boost: Number}],
