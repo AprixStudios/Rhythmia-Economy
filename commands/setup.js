@@ -18,7 +18,7 @@ module.exports = {
                     if (errr) return console.error(errr);
                     amnt.id++;
                     dbcreate.createDB(message.author.id, amnt.id).then(newDB => {
-                        dbsave.saveDB(newDB).then(message.channel.send(`Success.`));
+                        dbsave.saveDB(newDB).then(message.channel.send(`You have successfully started your life!`)).catch(error => console.error(error));
                         fs.writeFile(`./dbamount.json`, JSON.stringify(amnt, null, 2));
                     });
                 });
