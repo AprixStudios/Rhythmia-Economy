@@ -1,4 +1,4 @@
-function powerUpMoney(user, money, client) {
+/*function powerUpMoney(user, money, client) {
     const fs = require('fs-extra');
     return new Promise((reject, resolve) => {
         fs.readJson(`./shop.json`, (errr, shop) => {
@@ -25,4 +25,4 @@ function powerUpMoney(user, money, client) {
     });
 }
 
-module.exports = { name: "powerupadder", powerUpMoney}
+module.exports = { name: "powerupadder", powerUpMoney}*/

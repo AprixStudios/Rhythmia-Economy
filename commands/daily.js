@@ -15,11 +15,10 @@ module.exports = {
             let timeNow = Date.now();
             if (res.lastClaimed.daily > timeNow) return message.channel.send(`You have already claimed this within the last 24 hours.\nYou can claim this again in ${Time(res.lastClaimed.daily-Date.now())}`);
             let income = Math.round(Math.random() * (78 - 34) + 34);
-            let finalIncome = powerUpMoney(message.author, income, client)
             let timeNext = Date.now()+86400000;
-            res.balance.purse = res.balance.purse+finalIncome;
+            res.balance.purse = res.balance.purse;
             res.lastClaimed.daily = timeNext;
-            saveDB(res).then(message.channel.send(`You've just earned ${finalIncome} $${income}! You now have $${res.balance.purse+res.balance.bank} in your networth!`));
+            saveDB(res).then(message.channel.send(`You've just earned $${income}! You now have $${res.balance.purse+res.balance.bank} in your networth!`));
         });
     }
 }
