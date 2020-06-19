@@ -13,7 +13,7 @@ module.exports = {
         const fs = require('fs-extra');
         fs.readJson(`./shop.json`, (errr, shop) => {
             if (errr) return console.error(errr);
-            getDB(message.author).then(res => {
+            getDB(message.author.id).then(res => {
                 if (!args[0]) return message.channel.send(`Please tell me what you would like to buy.`);
                 let buyingThisItem = args[0].toLowerCase();
                 if (res.unlocks.colors[buyingThisItem]) return message.channel.send(`You have already bought this item.`);
