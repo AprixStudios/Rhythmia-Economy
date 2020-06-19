@@ -1,0 +1,26 @@
+function powerUpMoney(user, money, client) {
+    const fs = require('fs-extra');
+    return new Promise((reject, resolve) => {
+        fs.readJson(`./shop.json`, (errr, shop) => {
+            if (errr) return reject(errr);
+            const { getDB } = client.functions.get('dbfind');
+
+            getDB(user).then(res => {
+                if (res.unlocks.powerUps.length === 0) {
+                    resolve(money);
+                } else {
+                    let powers = [];
+                    for (i=0;i<res.unlocks.powerUps.length;i++) {
+                        powers.push(shop.powerUps.permanentMultipliers[res.unlocks.powerUps[i]].add);
+                    }
+                    let finalBoost = 1;
+                    for (i=0;i<powers.length;i++) {
+                        finalBoost = finalBoost*powers[i];
+                    }
+                    let finalIncome = money*finalBoost;
+                    resolve(finalIncome);
+                }
+            });
+        });
+    });
+}
