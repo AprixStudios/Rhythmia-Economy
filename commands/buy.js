@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: "buy",
     description: "Buy an item from the shop!",
-    usage: "",
+    usage: "<item>",
     category: "economy",
 
 
@@ -14,6 +14,7 @@ module.exports = {
         fs.readJson(`./shop.json`, (errr, shop) => {
             if (errr) return console.error(errr);
             getDB(message.author).then(res => {
+                if (!args[0]) return message.channel.send(`Please tell me what you would like to buy.`);
                 let buyingThisItem = args[0].toLowerCase();
                 if (res.unlocks.colors[buyingThisItem]) return message.channel.send(`You have already bought this item.`);
                 if (!shop.roles[buyingThisItem]) return message.channel.send(`That is not a valid color.`);
