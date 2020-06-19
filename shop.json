@@ -1,42 +1,52 @@
 {
     "roles": {
         "blurple": {
+            "name": "Blurple",
             "id": "721711387591573525",
             "cost": 3600000
         },
         "red": {
+            "name": "Red",
             "id": "721711419250180148",
             "cost": 1300000
         },
         "pink": {
+            "name": "Pink",
             "id": "721711420663791677",
             "cost": 1300000
         },
         "blue": {
+            "name": "Blue",
             "id": "721711421070639165",
             "cost": 1300000
         },
         "purple": {
+            "name": "Purple",
             "id": "721711421926277122",
             "cost": 1300000
         },
         "yellow": {
+            "name": "Yellow",
             "id": "721711422652022805",
             "cost": 1300000
         },
         "green": {
+            "name": "Green",
             "id": "721711568496099418",
             "cost": 1300000
         },
         "lime": {
+            "name": "Lime",
             "id": "721711569679024168",
             "cost": 1300000
         },
         "aqua": {
+            "name": "Aqua",
             "id": "721711569917968426",
             "cost": 1300000
         },
         "orange": {
+            "name": "Orange",
             "id": "721711570991710208",
             "cost": 1300000
         }
@@ -44,18 +54,22 @@
     "powerUps": {
         "permanentMultipliers": {
             "0.5x": {
+                "name": "1.5x",
                 "add": 1.5,
                 "cost": 15000
             },
             "1x": {
+                "name": "2x",
                 "add": 2,
                 "cost": 100000
             },
             "1.5x": {
+                "name": "2.5x",
                 "add": 2.5,
                 "cost": 300000
             },
             "2x": {
+                "name": "3x",
                 "add": 3,
                 "cost": 1000000
             }
