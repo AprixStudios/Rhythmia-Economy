@@ -3,6 +3,7 @@ module.exports = {
     description: "Deposit all your money to keep it safe.",
     usage: '<amount/all>',
     category: "economy",
+    aliases: ["dep"],
 
     code(client, message, args) {
         const { getDB } = client.functions.get('dbfind');
@@ -10,9 +11,10 @@ module.exports = {
 
         getDB(message.author.id).then(res => {
             let amount = parseInt(args[0]);
-            if (!amount) return message.channel.send(`You deposited $0! Seriously..? Stop wasting my time please.`);
+            let tAmount = args[0];
+            if (!amount && !tAmount) return message.channel.send(`You deposited $0! Seriously..? Stop wasting my time please.`);
             let realAmount;
-            if (amount.toLowerCase() === 'all') realAmount = res.balance.purse;
+            if (tAmount.toLowerCase() === 'all') realAmount = res.balance.purse;
             else if (!isNaN(amount)) realAmount = amount;
             else return message.channel.send(`That isn't a valid number.`);
             res.balance.bank = res.balance.bank+realAmount;
