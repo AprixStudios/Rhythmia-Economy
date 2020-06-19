@@ -24,3 +24,5 @@ function powerUpMoney(user, money, client) {
         });
     });
 }
+
+module.exports = { name: "powerupadder", powerUpMoney}
