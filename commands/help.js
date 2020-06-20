@@ -27,13 +27,22 @@ module.exports = {
             });
             if (info.length === 0) info.push(`No commands yet.`);
 
+            let abilities = client.commands.map(cmd => cmd).filter(cmd => cmd.category === 'abilities');
+            abilities.forEach((z, x) => {
+                abilities[x] = z.name;
+            });
+            if (abilities.length === 0) abilities.push(`No commands yet.`);
+
             const helpEmbed = new Discord.MessageEmbed()
                 .setColor('#72da7e')
                 .setTitle(`Available Commands`)
                 .setDescription(`This bot is custom made by [AprixStudios](https://github.com/AprixStudios)`)
                 .addField(`Economy`, economy.join('\n'), true)
+                .addBlankField(true)
                 .addField(`Roles`, roles.join('\n'), true)
                 .addField(`Info`, info.join('\n'), true)
+                .addBlankField(true)
+                .addField(`Abilities`, abilities.join('\n', true))
 
             return message.channel.send(helpEmbed).catch(err => console.error(err));
         } else if (command) {
