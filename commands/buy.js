@@ -21,7 +21,7 @@ module.exports = {
                 let theRoleTheyWantToBuy = shop.roles[buyingThisItem];
                 let theMoneyTheyCanSpend = res.balance.purse;
                 if (theRoleTheyWantToBuy.cost > theMoneyTheyCanSpend) return message.channel.send(`You do not have enough money to buy this color.`);
-                res.balance.purse = res.balance.purse-theRoleTheyWantToBuy.cost;
+                res.balance.purse -= theRoleTheyWantToBuy.cost;
                 res.unlocks.colors.push(theRoleTheyWantToBuy.name.toLowerCase());
                 saveDB(res).then(() => {
                     const boughtEmbed = new Discord.MessageEmbed()

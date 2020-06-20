@@ -11,7 +11,10 @@ const Schema = new mongoose.Schema({
     boosters: [{time: Number, boost: Number}],
     rebirth: Number,
     job: String,
-    skills: {cop: Number, law: Number, decisions: Number, communication: Number, firefighter: Number, physics: Number, medical: Number, therapy: Number, coding: Number, creativity: Number, editing: Number, commentary: Number, humour: Number, driving: Number, music: Number, painting: Number}
+    skills: {cop: Number, law: Number, decisions: Number, communication: Number, firefighter: Number, physics: Number, medical: Number, therapy: Number, coding: Number, creativity: Number, editing: Number, commentary: Number, humour: Number, driving: Number, music: Number, painting: Number},
+    jailed: Number,
+    records: Number,
+    rep: {nextRep: String, amount: Number}
 });
 
 const userID = mongoose.model("userID", Schema);

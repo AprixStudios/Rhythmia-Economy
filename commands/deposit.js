@@ -17,8 +17,8 @@ module.exports = {
             if (tAmount.toLowerCase() === 'all') realAmount = res.balance.purse;
             else if (!isNaN(amount)) realAmount = amount;
             else return message.channel.send(`That isn't a valid number.`);
-            res.balance.bank = res.balance.bank+realAmount;
-            res.balance.purse = res.balance.purse-realAmount;
+            res.balance.bank += realAmount;
+            res.balance.purse -= realAmount;
             saveDB(res).then(message.channel.send(`Successfully deposited $${realAmount}! You now have $${res.balance.bank} in your bank, and $${res.balance.purse} left in your purse!`));
         });
     }

@@ -15,7 +15,7 @@ module.exports = {
             if (res.lastClaimed.weekly > timeNow) return message.channel.send(`You have already claimed this within the last 7 days.\nYou can claim this again in ${Time(res.lastClaimed.weekly-Date.now())}`);
             let income = Math.round(Math.random() * (727 - 374) + 374);
             let timeNext = Date.now()+86400000*7;
-            res.balance.purse = res.balance.purse+income;
+            res.balance.purse += income;
             res.lastClaimed.weekly = timeNext;
             saveDB(res).then(message.channel.send(`You've just earned $${income}! You now have $${res.balance.purse+res.balance.bank} in your networth!`))
         });
