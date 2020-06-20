@@ -38,10 +38,8 @@ module.exports = {
                 .setTitle(`Available Commands`)
                 .setDescription(`This bot is custom made by [AprixStudios](https://github.com/AprixStudios)`)
                 .addField(`Economy`, economy.join('\n'), true)
-                .addBlankField(true)
                 .addField(`Roles`, roles.join('\n'), true)
                 .addField(`Info`, info.join('\n'), true)
-                .addBlankField(true)
                 .addField(`Abilities`, abilities.join('\n', true))
 
             return message.channel.send(helpEmbed).catch(err => console.error(err));
