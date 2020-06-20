@@ -15,6 +15,8 @@ module.exports = {
             if (!amount && !tAmount) return message.channel.send(`You withdrew $0! Seriously..? Stop wasting my time please.`);
             let realAmount;
             if (tAmount.toLowerCase() === 'all') realAmount = res.balance.bank;
+            else if (tAmount.toLowerCase() === 'half') realAmount = res.balance.purse/2;
+            else if (tAmount.toLowerCase() === 'quarter') realAmount = res.balance.purse/4;
             else if (!isNaN(amount)) realAmount = amount;
             else return message.channel.send(`That isn't a valid number.`);
             res.balance.bank -= realAmount;

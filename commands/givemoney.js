@@ -22,6 +22,8 @@ module.exports = {
                 if (!amount && !tAmount) return message.channel.send(`You're giving them nothing..?`);
                 let realAmount;
                 if (tAmount.toLowerCase() === 'all') realAmount = sender.balance.purse;
+                else if (tAmount.toLowerCase() === 'half') realAmount = sender.balance.purse/2;
+                else if (tAmount.toLowerCase() === 'quarter') realAmount = sender.balance.purse/4;
                 else if (!isNaN(amount)) realAmount = amount;
                 else return message.channel.send(`That isn't a valid number.`);
                 sender.balance.purse -= realAmount;
