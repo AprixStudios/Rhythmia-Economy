@@ -10,8 +10,8 @@ function getUser(mention, client) {
     else if (client.users.cache.get(mention)) {
         return client.users.cache.get(mention);
     } else {
-        if (client.users.cache.find(u => u.tag.startsWith(mention))) {
-            return client.users.cache.find(u => u.tag.startsWith(mention));
+        if (client.users.cache.find(u => u.tag.toLowerCase().startsWith(mention.toLowerCase()))) {
+            return client.users.cache.find(u => u.tag.toLowerCase().startsWith(mention.toLowerCase()));
         }
         else {
             return;
