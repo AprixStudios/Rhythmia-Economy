@@ -1,0 +1,68 @@
+{
+    "skills": {
+        "cop": {
+            "diff": 4,
+            "imp": 7
+        },
+        "law": {
+            "diff": 6,
+            "imp": 8
+        },
+        "decisions": {
+            "diff": 2,
+            "imp": 4
+        },
+        "communication": {
+            "diff": 1,
+            "imp": 5
+        },
+        "firefighter": {
+            "diff": 5,
+            "imp": 8
+        },
+        "physics": {
+            "diff": 2,
+            "imp": 4
+        },
+        "medical": {
+            "diff": 3,
+            "imp": 10
+        },
+        "therapy": {
+            "diff": 6,
+            "imp": 3
+        },
+        "coding": {
+            "diff": 4,
+            "imp": 4
+        },
+        "creativity": {
+            "diff": 5,
+            "imp": 4
+        },
+        "editing": {
+            "diff": 5,
+            "imp": 3
+        },
+        "commentary": {
+            "diff": 2,
+            "imp": 2
+        },
+        "humour": {
+            "diff": 2,
+            "imp": 5
+        },
+        "driving": {
+            "diff": 2,
+            "imp": 6
+        },
+        "music": {
+            "diff": 7,
+            "imp": 3
+        },
+        "painting": {
+            "diff": 6,
+            "imp": 2
+        }
+    }
+}
