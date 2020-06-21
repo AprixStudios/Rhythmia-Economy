@@ -1,6 +1,7 @@
 const MongoDB = require('mongodb');
 const mongoose = require('mongoose');
 
+// don't question it
 const Schema = new mongoose.Schema({
     userID: String,
     id: Number,

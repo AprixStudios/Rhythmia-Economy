@@ -6,10 +6,12 @@ const MongoDB = require('mongodb');
 const http = require('http');
 const keepAlive = require(`./server.js`);
 
+// Keep uptime
 setInterval(() => {
     http.get('http://rhythmia-economy--aprixia.repl.co/');
 }, 10000);
 
+// Connect to db
 mongoose.connect(`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@altricatiadb-${process.env.DBURL}/rhythmiaeconomy?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -17,6 +19,7 @@ mongoose.connect(`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@altr
 .then(console.log('Database Connected...'))
 .catch(err => console.log(err));
 
+// Function handler
 client.functions = new Discord.Collection();
 
 const functionFiles = fs.readdirSync('./functions').filter(file => file.endsWith('.js'));
@@ -26,6 +29,7 @@ for (const file of functionFiles) {
     client.functions.set(FunctionFile.name, FunctionFile);
 }
 
+// Command handlers
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -44,6 +48,7 @@ for (const file of subCommandFiles) {
     client.subcommands.set(subCommand.name, subCommand);
 }
 
+// Event handler
 try {
     let eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
     for (i = 0; i < eventFiles.length; i++) {
@@ -58,9 +63,11 @@ try {
     return console.error(error);
 }
 
+// Will put this in it's own file soon
 client.on('ready', ready => {
     console.log(`Running!`);
 });
 
+// run express server and log in
 keepAlive();
 client.login(process.env.TOKEN);

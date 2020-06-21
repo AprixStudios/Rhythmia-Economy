@@ -1,4 +1,5 @@
 function Time(s) {
+    // make the variables
     let ms = s % 1000;
     s = (s - ms) / 1000;
     let secs = s % 60;
@@ -8,6 +9,8 @@ function Time(s) {
     let hours = s % 24;
     let days = (s - hours) / 24;
    
+    // put them together
+    // it works I swear
     let displayTime;
     if (secs >= 10) displayTime = secs;
     else if (secs <= 9) displayTime = `0${secs}`;

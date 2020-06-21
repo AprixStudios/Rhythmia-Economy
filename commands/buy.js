@@ -20,7 +20,7 @@ module.exports = {
                 if (!shop.roles[buyingThisItem]) return message.channel.send(`That is not a valid color.`);
                 let theRoleTheyWantToBuy = shop.roles[buyingThisItem];
                 let theMoneyTheyCanSpend = res.balance.purse;
-                if (theRoleTheyWantToBuy.cost > theMoneyTheyCanSpend) return message.channel.send(`You do not have enough money to buy this color.`);
+                if (theRoleTheyWantToBuy.cost > theMoneyTheyCanSpend) return message.channel.send(`You do not have enough money to buy this color.`); // english
                 res.balance.purse -= theRoleTheyWantToBuy.cost;
                 res.unlocks.colors.push(theRoleTheyWantToBuy.name.toLowerCase());
                 saveDB(res).then(() => {

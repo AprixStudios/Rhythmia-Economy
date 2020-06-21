@@ -1,5 +1,6 @@
 const { userID, DB } = require(`./db.js`);
 
+// it just creates the database for the user... what else do you need to know?
 async function createDB(userid, dbid) {
 const newDB = new DB({
     userID: userid,

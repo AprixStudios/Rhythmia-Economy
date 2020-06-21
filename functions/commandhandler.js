@@ -11,6 +11,7 @@ module.exports = {
         const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
         if (!command) {
+            // if it isn't a command it will check for a subcommand
             let subCommand = client.subcommands.get(commandName);
             if (!subCommand) return;
             try {
@@ -19,6 +20,7 @@ module.exports = {
                 return console.error(error);
             }
         } else {
+            // but if it is a command it will do this
             try {
                 command.code(client, message, args);
             } catch (error) {
