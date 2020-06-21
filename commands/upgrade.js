@@ -7,7 +7,7 @@ module.exports = {
     code(client, message, args) {
         const { getDB } = client.functions.get('dbfind');
         const { saveDB } = client.functions.get('dbsave');
-        const skillInfo = require(`./skills.json`);
+        const skillInfo = require(`../skills.json`);
         function skillCost(skill, diff, important) {
             return ((skill+3482)+(skill*diff*important*432))*2;
         }
